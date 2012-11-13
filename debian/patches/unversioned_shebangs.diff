@@ -1,0 +1,23 @@
+#Author: Luca Falavigna <dktrkranz@debian.org>
+#Bug-Debian: http://bugs.debian.org/625751
+#Last-Update: 2011-05-08
+Index: xdelta3-0y.dfsg/testing/xdelta3-regtest.py
+===================================================================
+--- xdelta3-0y.dfsg.orig/testing/xdelta3-regtest.py	2011-05-08 13:22:23.412081704 +0200
++++ xdelta3-0y.dfsg/testing/xdelta3-regtest.py	2011-05-08 13:21:53.188081717 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.6
++#!/usr/bin/python
+ # xdelta 3 - delta compression tools and library
+ # Copyright (C) 2003, 2006, 2007, 2008.  Joshua P. MacDonald
+ #
+Index: xdelta3-0y.dfsg/xdelta3-test.py
+===================================================================
+--- xdelta3-0y.dfsg.orig/xdelta3-test.py	2011-05-08 13:22:23.344081704 +0200
++++ xdelta3-0y.dfsg/xdelta3-test.py	2011-05-08 13:21:57.100081790 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2.5
++#!/usr/bin/python
+ # xdelta 3 - delta compression tools and library
+ # Copyright (C) 2003, 2006, 2007.  Joshua P. MacDonald
+ #

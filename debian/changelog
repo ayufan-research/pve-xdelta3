@@ -1,0 +1,76 @@
+pve-xdelta3 (3.0.5-1) unstable; urgency=low
+
+  * Updated to 3.0.5.
+
+ -- Kamil Trzcinski <ayufan@ayufan.eu>  Tue, 13 Nov 2012 17:43:00 +0100
+
+pve-xdelta3 (3.0.4) unstable; urgency=low
+
+  * Updated to 3.0.4.
+
+ -- Kamil Trzcinski <ayufan@ayufan.eu>  Tue, 26 Aug 2012 18:22:23 +0200
+
+pve-xdelta3 (3.0.0.dfsg-2) unstable; urgency=low
+
+  * Added lzop.
+  * Removed all python dependencies.
+  * Renamed to pve-xdelta3.
+
+ -- Kamil Trzcinski <ayufan@ayufan.eu>  Tue, 14 Aug 2012 22:04:05 +0200
+
+xdelta3 (3.0.0.dfsg-1) unstable; urgency=low
+
+  * New upstream release, "3.0 is a stable release series"
+  * Remove unused build-dependency 'cdbs'
+  * Thanks Luca for NMU
+
+ -- A Mennucc1 <mennucc1@debian.org>  Sun, 29 May 2011 22:59:32 +0200
+
+xdelta3 (0y.dfsg-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Convert package to dh_python2 (Closes: #617151).
+    + debian/control:
+      - Build-depend on python-all-dev (>= 2.6.6-3~).
+      - Drop python-central from Build-Depends.
+      - Define X-Python-Version field.
+      - Drop XB-Python-Version field.
+    + debian/pycompat:
+      - Useless, removed.
+    + debian/rules:
+      - Replace dh_pycentral with dh_python2.
+  * debian/patches/unversioned_shebangs.diff:
+    - Do not use versioned shebangs (Closes: #625751).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sun, 08 May 2011 13:28:08 +0200
+
+xdelta3 (0y.dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+    - Can read source from pipe/fifo , new -B option.
+    - Has manpage (thanks Leo (costela) Antunes) 
+  * Convert to 3.0 (quilt) source format
+  * Correct lintian warnings:
+    - Update standards version,
+    - add misc:Depends
+
+ -- A Mennucc1 <mennucc1@debian.org>  Mon, 22 Feb 2010 21:59:03 +0100
+
+xdelta3 (0s.dfsg-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- A Mennucc1 <mennucc1@debian.org>  Mon, 19 Nov 2007 13:37:26 +0100
+
+xdelta3 (0q.dfsg-2) unstable; urgency=low
+
+  * Bug fix: "xdelta3: FTBFS: Not using -fPIC to create shared object.",
+    thanks to Kurt Roeckx (Closes: #439656).
+
+ -- A Mennucc1 <mennucc1@debian.org>  Sun, 26 Aug 2007 16:06:58 +0200
+
+xdelta3 (0q.dfsg-1) unstable; urgency=low
+
+  * Initial Release  (Closes: #433774)
+
+ -- A Mennucc1 <mennucc1@debian.org>  Thu, 26 Jul 2007 14:43:12 +0200

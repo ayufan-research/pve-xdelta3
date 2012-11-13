@@ -1,0 +1,16 @@
+Source: pve-xdelta3
+Section: utils
+Priority: optional
+Maintainer: A Mennucc1 <mennucc1@debian.org>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.8.4.0
+
+Package: pve-xdelta3
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A diff utility which works with binary files
+ Xdelta3 is a set of tools designed to compute changes between
+ binary files.  These changes (delta files) are similar to the output of the
+ "diff" program, in that they may be used to store and transmit only the
+ changes between files.  The "delta files" that Xdelta3 manages are
+ stored in RFC3284 (VCDIFF) format.

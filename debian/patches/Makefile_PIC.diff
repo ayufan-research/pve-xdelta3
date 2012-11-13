@@ -1,0 +1,29 @@
+#Author: A Mennucc1 <mennucc1@debian.org>
+#Bug-Debian: http://bugs.debian.org/439656
+#Last-Update: 2010-02-22
+Index: xdelta3-3.0.0.dfsg/Makefile
+===================================================================
+--- xdelta3-3.0.0.dfsg.orig/Makefile	2011-03-13 10:22:43.000000000 +0100
++++ xdelta3-3.0.0.dfsg/Makefile	2011-03-13 10:23:36.000000000 +0100
+@@ -203,6 +203,10 @@
+ xdelta3.o: $(SOURCES)
+ 	$(CC) $(OPTFLAGS) $(CFLAGS) -c xdelta3.c $(SWIG_FLAGS) -o xdelta3.o
+ 
++xdelta3_PIC.o: $(SOURCES)
++	$(CC) $(OPTFLAGS) $(CFLAGS) -fPIC -c xdelta3.c $(SWIG_FLAGS) -o xdelta3_PIC.o
++
++
+ xdelta3_wrap.o: xdelta3_wrap.c
+ 	$(CC) $(OPTFLAGS) $(CFLAGS) $(SWIG_FLAGS) \
+ 	      -DHAVE_CONFIG_H \
+@@ -221,8 +225,8 @@
+ 	cp $(SWIGTGT) /usr/lib/python$(PYVER)/site-packages
+ 
+ ifeq ("$(DARWIN)", "")
+-xdelta3module.so: xdelta3_wrap.o xdelta3.o
+-	ld -shared xdelta3.o xdelta3_wrap.o \
++xdelta3module.so: xdelta3_wrap.o xdelta3_PIC.o
++	ld -shared xdelta3_PIC.o xdelta3_wrap.o \
+ 		-o xdelta3module.so \
+ 		/usr/lib/libpython$(PYVER).so \
+ 		-lc

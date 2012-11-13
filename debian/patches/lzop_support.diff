@@ -1,0 +1,11 @@
+diff -u xdelta3-3.0.0.dfsg.org/xdelta3-main.h xdelta3-3.0.0.dfsg/xdelta3-main.h
+--- xdelta3-3.0.0.dfsg.org/xdelta3-main.h	2012-08-13 22:04:29.000000000 +0200
++++ xdelta3-3.0.0.dfsg/xdelta3-main.h	2012-08-13 22:07:29.000000000 +0200
+@@ -327,6 +327,7 @@
+   { "bzip2",    "-c",   "bzip2",      "-dc",   "B", "BZh",          3, 0 },
+   { "gzip",     "-c",   "gzip",       "-dc",   "G", "\037\213",     2, 0 },
+   { "compress", "-c",   "uncompress", "-c",    "Z", "\037\235",     2, 0 },
++  { "lzop",     "-c",   "lzop",       "-dc",   "L", "\211LZO\0\r\n\032\n", 9, 0 },
+ 
+   /* TODO: add commandline support for magic-less formats */
+   /*{ "lzma", "-c",   "lzma", "-dc",   "M", "]\000", 2, 0 },*/
