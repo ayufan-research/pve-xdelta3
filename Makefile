@@ -2,10 +2,11 @@ RELEASE=2.1
 
 PACKAGE=pve-xdelta3
 PKGREL=1
-SDVER=3.0.5
+SDVER=3.0.6
 URL=http://xdelta.googlecode.com/files
 
-DEB=${PACKAGE}_${SDVER}-${PKGREL}_amd64.deb
+ARCH:=$(shell dpkg-architecture -qDEB_BUILD_ARCH)
+DEB=${PACKAGE}_${SDVER}-${PKGREL}_${ARCH}.deb
 
 SDDIR=xdelta3-${SDVER}
 SDSRC=${SDDIR}.tar.gz

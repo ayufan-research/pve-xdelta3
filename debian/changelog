@@ -1,3 +1,10 @@
+pve-xdelta3 (3.0.6-1) UNRELEASED; urgency=low
+
+  * Updated to 3.0.6.
+  * Fixes for issue 149 (https://code.google.com/p/xdelta/issues/detail?id=149).
+
+ -- Kamil Trzcinski <ayufan@ayufan.eu>  Sun, 25 Aug 2013 10:22:30 +0200
+
 pve-xdelta3 (3.0.5-1) unstable; urgency=low
 
   * Updated to 3.0.5.
