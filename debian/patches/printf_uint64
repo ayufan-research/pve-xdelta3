@@ -1,0 +1,40 @@
+--- a/xdelta3.h
++++ b/xdelta3.h
+@@ -152,25 +152,25 @@ typedef uint32_t usize_t;
+ #ifndef _FILE_OFFSET_BITS
+ #define _FILE_OFFSET_BITS 64
+ #endif
+-
+ typedef uint64_t xoff_t;
+ #define SIZEOF_XOFF_T 8
+ #define SIZEOF_USIZE_T 4
+ #ifndef WIN32
+-#if SIZEOF_SIZE_T == 8
+-#define Q "z"
+-#else
+-#define Q "ll"
+-#endif
+-#else
+-#define Q "I64"
+-#endif
+-#else
++#define __STDC_FORMAT_MACROS
++#include <inttypes.h>
++#define Q  PRIu64 /* to print uint64_t that is xoff_t */
++#define Qd PRId64 /* to print  int64_t  */
++#else      /*WIN32*/
++#define Q  "I64u"
++#define Qd "I64d"
++#endif     /*WIN32*/
++#else /* XD3_USE_LARGEFILE64 */
+ typedef uint32_t xoff_t;
+ #define SIZEOF_XOFF_T 4
+ #define SIZEOF_USIZE_T 4
+-#define Q
+-#endif
++#define Q  "u"
++#define Qd "d"
++#endif /* XD3_USE_LARGEFILE64 */
+ 
+ #define USE_UINT32 (SIZEOF_USIZE_T == 4 || \
+ 		    SIZEOF_XOFF_T == 4 || REGRESSION_TEST)

@@ -1,0 +1,25 @@
+Description: Fix LZMA tests
+Origin: upstream, https://github.com/jmacd/xdelta-devel/commit/806836136cec2eeb763b4b539d4d41bc2c5bbf5c
+Bug: https://github.com/jmacd/xdelta/issues/159
+Bug-Debian: https://bugs.debian.org/740284
+Forwarded: not-needed
+Author: Josh MacDonald <josh.macdonald@gmail.com>
+Reviewed-by: Salvatore Bonaccorso <carnil@debian.org>
+Last-Update: 2016-02-19
+
+---
+
+--- a/xdelta3-test.h
++++ b/xdelta3-test.h
+@@ -1059,9 +1059,9 @@ test_decompress_single_bit_error (xd3_st
+     }
+ 
+   /* Check expected non-failures */
+-  if (non_failures != expected_non_failures)
++  if (non_failures > expected_non_failures)
+     {
+-      XPR(NT "non-failures %u; expected %u",
++      XPR(NT "non-failures %u > expected %u",
+ 	 non_failures, expected_non_failures);
+       stream->msg = "incorrect";
+       return XD3_INTERNAL;

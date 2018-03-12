@@ -1,29 +1,72 @@
-pve-xdelta3 (3.0.6-1) UNRELEASED; urgency=low
+xdelta3 (3.0.11-dfsg-1ubuntu1ayufan1) testing; urgency=medium
 
-  * Updated to 3.0.6.
-  * Fixes for issue 149 (https://code.google.com/p/xdelta/issues/detail?id=149).
+  * Add support for lzop, needed by pve-xdelta3
 
- -- Kamil Trzcinski <ayufan@ayufan.eu>  Sun, 25 Aug 2013 10:22:30 +0200
+ -- Kamil Trzciński <ayufan@ayufan.eu>  Mon, 12 Mar 2018 23:54:18 +0100
 
-pve-xdelta3 (3.0.5-1) unstable; urgency=low
+xdelta3 (3.0.11-dfsg-1ubuntu1) zesty; urgency=medium
 
-  * Updated to 3.0.5.
+  * debian/rules: Run tests during build.
+  * debian/patches/skip_permission_tests_when_root: Skip no_output tests when
+    running as root or under fakeroot, since they rely on getting an EPERM
+    when trying to write to a mode 0000 file.
 
- -- Kamil Trzcinski <ayufan@ayufan.eu>  Tue, 13 Nov 2012 17:43:00 +0100
+ -- William Grant <wgrant@ubuntu.com>  Tue, 06 Dec 2016 13:04:51 +1100
 
-pve-xdelta3 (3.0.4) unstable; urgency=low
+xdelta3 (3.0.11-dfsg-1) unstable; urgency=medium
 
-  * Updated to 3.0.4.
+  * New upstream release;
+    -  disable obsolete debian patches : regtest_size_t  printf_uint64
+	  Q_not_u CVE-2014-9765.patch fix_lzma_test.patch
+    -  refreshed patch : manpage_lzma
+    -  kept patch :  unversioned_shebangs.diff
+  * Deleted obsolete watch file
+  * Bump standards version
+  * Solves "upstream has some bugfixes for 3.0.8 release.", thanks to
+    shirish शिरीष (Closes: #779976).
 
- -- Kamil Trzcinski <ayufan@ayufan.eu>  Tue, 26 Aug 2012 18:22:23 +0200
+ -- A Mennucc1 <mennucc1@debian.org>  Sat, 27 Feb 2016 11:40:46 +0100
 
-pve-xdelta3 (3.0.0.dfsg-2) unstable; urgency=low
+xdelta3 (3.0.8-dfsg-1.2) unstable; urgency=medium
 
-  * Added lzop.
-  * Removed all python dependencies.
-  * Renamed to pve-xdelta3.
+  * Non-maintainer upload.
+  * Update CVE-2014-9765.patch.
+    Add as well tests that the default appheader works.
+  * Fix LZMA tests (Closes: #740284)
 
- -- Kamil Trzcinski <ayufan@ayufan.eu>  Tue, 14 Aug 2012 22:04:05 +0200
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 19 Feb 2016 13:23:39 +0100
+
+xdelta3 (3.0.8-dfsg-1.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * CVE-2014-9765: buffer overflow in main_get_appheader (Closes: #814067)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Wed, 10 Feb 2016 21:33:10 +0100
+
+xdelta3 (3.0.8-dfsg-1) unstable; urgency=low
+
+  * new upstream release (only minor changes)
+  * Bug fix: "Please add watch file", thanks to Dmitry Shachnev (Closes:
+    #735273).
+
+ -- A Mennucc1 <mennucc1@debian.org>  Thu, 20 Feb 2014 12:20:22 +0100
+
+xdelta3 (3.0.7-dfsg-2) unstable; urgency=low
+
+  * fix FTBFS in testing/regtest.cc
+  * add liblzma to build dependencies
+  * fix compiling warnings
+
+ -- A Mennucc1 <mennucc1@debian.org>  Mon, 17 Jun 2013 08:56:43 +0200
+
+xdelta3 (3.0.7-dfsg-1) unstable; urgency=low
+
+  * New upstream release (Closes: #691337).
+  * Switch build system to CDBS
+  * Drop 'python-xdelta3' package, currently broken.
+  * Bump standards version.
+
+ -- A Mennucc1 <mennucc1@debian.org>  Sun, 09 Jun 2013 12:08:02 +0200
 
 xdelta3 (3.0.0.dfsg-1) unstable; urgency=low
 

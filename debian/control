@@ -1,14 +1,16 @@
-Source: pve-xdelta3
+Source: xdelta3
 Section: utils
 Priority: optional
-Maintainer: A Mennucc1 <mennucc1@debian.org>
-Build-Depends: debhelper (>= 5)
-Standards-Version: 3.8.4.0
+XS-Python-Version: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: A Mennucc1 <mennucc1@debian.org>
+Build-Depends: cdbs, debhelper, liblzma-dev
+Standards-Version: 3.9.6.0
 
-Package: pve-xdelta3
+Package: xdelta3
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: A diff utility which works with binary files
+Description: Diff utility which works with binary files
  Xdelta3 is a set of tools designed to compute changes between
  binary files.  These changes (delta files) are similar to the output of the
  "diff" program, in that they may be used to store and transmit only the

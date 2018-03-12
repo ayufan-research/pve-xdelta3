@@ -1,0 +1,20 @@
+Index: xdelta3-3.0.11-dfsg/xdelta3-test.h
+===================================================================
+--- xdelta3-3.0.11-dfsg.orig/xdelta3-test.h
++++ xdelta3-3.0.11-dfsg/xdelta3-test.h
+@@ -2950,7 +2950,14 @@ xd3_selftest (void)
+ #if SHELL_TESTS
+   DO_TEST (force_behavior, 0, 0);
+   DO_TEST (stdout_behavior, 0, 0);
+-  DO_TEST (no_output, 0, 0);
++
++  // The no_output tests rely on writing to a mode 0000 file failing,
++  // which isn't the case when running as root or under fakeroot.
++  if (geteuid() != 0)
++    {
++      DO_TEST (no_output, 0, 0);
++    }
++
+   DO_TEST (appheader, 0, 0);
+   DO_TEST (command_line_arguments, 0, 0);
+ 

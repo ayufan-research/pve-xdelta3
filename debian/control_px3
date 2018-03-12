@@ -1,0 +1,14 @@
+Package: python-xdelta3
+Architecture: any
+Section: python
+Depends:  ${python:Depends}, ${shlibs:Depends}, ${misc:Depends}
+Provides: ${python:Provides}
+Description: Xdelta3 python module
+ Xdelta3 is a set of tools designed to compute changes between
+ binary files.  These changes (delta files) are similar to the output of the
+ "diff" program, in that they may be used to store and transmit only the
+ changes between files.  The "delta files" that Xdelta3 manages are
+ stored in RFC3284 (VCDIFF) format. 
+ .
+ This is the python module.
+
