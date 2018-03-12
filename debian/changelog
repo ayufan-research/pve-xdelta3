@@ -1,5 +1,6 @@
-xdelta3 (3.0.11-dfsg-1ubuntu1ayufan1) testing; urgency=medium
+pve-xdelta3 (3.0.11-dfsg-1ubuntu1ayufan1) testing; urgency=medium
 
+  * Add pve-xdelta3
   * Add support for lzop, needed by pve-xdelta3
 
  -- Kamil Trzciński <ayufan@ayufan.eu>  Mon, 12 Mar 2018 23:54:18 +0100
