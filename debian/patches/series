@@ -5,4 +5,4 @@ manpage_lzma
 
 
 skip_permission_tests_when_root
-lzop_support.diff
+lzop_std_support.diff

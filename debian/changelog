@@ -1,3 +1,9 @@
+pve-xdelta3 (3.0.11-dfsg-1ubuntu1~zstd~ayufan2) testing; urgency=medium
+
+  * Add support for zstd, needed by pve-xdelta3
+
+ -- Kamil Trzciński <ayufan@ayufan.eu>  Mon, 24 May 2020 12:43:18 +0100
+
 pve-xdelta3 (3.0.11-dfsg-1ubuntu1ayufan1) testing; urgency=medium
 
   * Add pve-xdelta3

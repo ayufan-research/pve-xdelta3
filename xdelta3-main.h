@@ -275,6 +275,8 @@ static main_extcomp extcomp_types[] =
   { "bzip2",    "-c",   "bzip2",      "-dc",   "B", "BZh",          3, 0 },
   { "gzip",     "-c",   "gzip",       "-dc",   "G", "\037\213",     2, 0 },
   { "compress", "-c",   "uncompress", "-c",    "Z", "\037\235",     2, 0 },
+  { "lzop",     "-c",   "lzop",       "-dc",   "L", "\211LZO\0\r\n\032\n", 9, 0 },
+  { "zstd",     "",     "zstd",       "-d",    "S", "\x28\xb5\x2f\xfd", 4, 0 },
 
   /* Xz is lzma with a magic number http://tukaani.org/xz/format.html */
   { "xz", "-c", "xz", "-dc", "Y", "\xfd\x37\x7a\x58\x5a\x00", 2, 0 },
